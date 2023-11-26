@@ -5,8 +5,11 @@ export const comparePrice = (priceA, priceB) => {
 };
 
 export const compareArea = (areaA, areaB) => {
-  if (areaA < areaB) return "worse";
-  if (areaA > areaB) return "better";
+  const numericAreaA = Number(areaA);
+  const numericAreaB = Number(areaB);
+
+  if (numericAreaA < numericAreaB) return "worse";
+  if (numericAreaA > numericAreaB) return "better";
   return "same";
 };
 
