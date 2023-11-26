@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import "./Comparison.scss";
 import ComparisonDetail from "./ComparisonDetail";
+import { getComparisonClassNames } from "../Helpers/helper";
 
 export default function Comparison({ idA, idB }) {
   const [comparisonA, setComparisonA] = useState([]);
@@ -34,48 +35,19 @@ export default function Comparison({ idA, idB }) {
     loadData();
   }, [idA, idB]);
 
-  const comparePrice = (priceA, priceB) => {
-    if (priceA < priceB) return "better";
-    if (priceA > priceB) return "worse";
-    return "same";
-  };
-
-  const compareArea = (areaA, areaB) => {
-    if (areaA < areaB) return "worse";
-    if (areaA > areaB) return "better";
-    return "same";
-  };
-
-  const priceClassNameA = comparePrice(
-    comparisonA.prize_czk,
-    comparisonB.prize_czk
-  );
-  const buildingAreaClassNameA = compareArea(
-    comparisonA.building_area,
-    comparisonB.building_area
-  );
-  const landAreaClassNameA = compareArea(
-    comparisonA.land_area,
-    comparisonB.land_area
-  );
-
-  const priceClassNameB = comparePrice(
-    comparisonB.prize_czk,
-    comparisonA.prize_czk
-  );
-  const buildingAreaClassNameB = compareArea(
-    comparisonB.building_area,
-    comparisonA.building_area
-  );
-  const landAreaClassNameB = compareArea(
-    comparisonB.land_area,
-    comparisonA.land_area
-  );
+  const {
+    priceClassNameA,
+    buildingAreaClassNameA,
+    landAreaClassNameA,
+    priceClassNameB,
+    buildingAreaClassNameB,
+    landAreaClassNameB,
+  } = getComparisonClassNames(comparisonA, comparisonB);
 
   return (
     <div className="comparison-container">
       {isLoading ? (
-        <p>Loading...</p>
+        <p>Loading Comparison...</p>
       ) : (
         <>
           {comparisonA && (

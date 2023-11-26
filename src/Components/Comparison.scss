@@ -12,18 +12,18 @@ $same: #529bfa;
     padding: 0.5rem;
     border: 1px solid $main-color;
 
-    .comparison-property-image {
+    .comparison-property__image {
+      width: 100%;
       object-fit: cover;
-      width: 20rem;
     }
 
-    .comparison-property-details {
+    .comparison-property__details {
       display: flex;
       flex-direction: column;
 
-      .comparison-property-price,
-      .comparison-property-floor,
-      .comparison-property-land {
+      .comparison-property__price,
+      .comparison-property__floor,
+      .comparison-property__land {
         display: flex;
         justify-content: space-between;
         margin: 0;
@@ -42,19 +42,20 @@ $same: #529bfa;
         }
       }
 
-      .comparison-property-locality {
+      .comparison-property__locality {
         display: flex;
         justify-content: space-between;
         margin: 0;
         padding-bottom: 0.5rem;
       }
 
-      .comparison-property-company {
+      .comparison-property__company {
         display: flex;
         align-items: center;
 
-        .comparison-property-company-image {
+        .comparison-property__company-image {
           height: 3rem;
+          margin-right: 1rem;
         }
       }
     }
