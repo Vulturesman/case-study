@@ -1,4 +1,7 @@
 $main-color: #a8a8a8;
+$better: #80ffac;
+$worse: #ff1b15;
+$same: #529bfa;
 
 .comparison-container {
   display: flex;
@@ -18,63 +21,34 @@ $main-color: #a8a8a8;
       display: flex;
       flex-direction: column;
 
-      .comparison-property-price {
+      .comparison-property-price,
+      .comparison-property-floor,
+      .comparison-property-land {
         display: flex;
         justify-content: space-between;
         margin: 0;
         padding-bottom: 0.5rem;
-        .better {
-          background-color: green;
+
+        &.better {
+          background-color: rgba($better, 0.6);
         }
 
-        .worse {
-          background-color: red;
+        &.worse {
+          background-color: rgba($worse, 0.6);
         }
 
-        .same {
-          background-color: yellow;
+        &.same {
+          background-color: rgba($same, 0.6);
         }
       }
+
       .comparison-property-locality {
         display: flex;
         justify-content: space-between;
         margin: 0;
         padding-bottom: 0.5rem;
       }
-      .comparison-property-floor {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        padding-bottom: 0.5rem;
-        .better {
-          background-color: green;
-        }
 
-        .worse {
-          background-color: red;
-        }
-
-        .same {
-          background-color: yellow;
-        }
-      }
-      .comparison-property-land {
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        padding-bottom: 0.5rem;
-        .better {
-          background-color: green;
-        }
-
-        .worse {
-          background-color: red;
-        }
-
-        .same {
-          background-color: yellow;
-        }
-      }
       .comparison-property-company {
         display: flex;
         align-items: center;

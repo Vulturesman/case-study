@@ -1,6 +1,5 @@
 .properties-container {
   display: flex;
-  gap: 0.2rem;
   margin-top: 2rem;
 
   .pagination-container {
@@ -15,10 +14,10 @@
   }
 
   .property-container {
+    padding: 0.2rem;
     display: flex;
     flex-direction: column;
     width: 7rem;
-    height: 7rem;
     cursor: pointer;
 
     .property-image {
@@ -27,12 +26,12 @@
     }
 
     .property-slug {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       margin: 0;
     }
   }
   .property-container.selected {
-    scale: 1.1;
+    scale: 1.05;
     border: 3px solid blue;
   }
 }

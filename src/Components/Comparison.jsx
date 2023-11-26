@@ -46,17 +46,30 @@ export default function Comparison({ idA, idB }) {
     return "same";
   };
 
-  const priceClassName = comparePrice(
+  const priceClassNameA = comparePrice(
     comparisonA.prize_czk,
     comparisonB.prize_czk
   );
-  const buildingAreaClassName = compareArea(
+  const buildingAreaClassNameA = compareArea(
     comparisonA.building_area,
     comparisonB.building_area
   );
-  const landAreaClassName = compareArea(
+  const landAreaClassNameA = compareArea(
     comparisonA.land_area,
     comparisonB.land_area
+  );
+
+  const priceClassNameB = comparePrice(
+    comparisonB.prize_czk,
+    comparisonA.prize_czk
+  );
+  const buildingAreaClassNameB = compareArea(
+    comparisonB.building_area,
+    comparisonA.building_area
+  );
+  const landAreaClassNameB = compareArea(
+    comparisonB.land_area,
+    comparisonA.land_area
   );
 
   return (
@@ -68,17 +81,17 @@ export default function Comparison({ idA, idB }) {
           {comparisonA && (
             <ComparisonDetail
               data={comparisonA}
-              priceClassName={priceClassName}
-              buildingAreaClassName={buildingAreaClassName}
-              landAreaClassName={landAreaClassName}
+              priceClassName={priceClassNameA}
+              buildingAreaClassName={buildingAreaClassNameA}
+              landAreaClassName={landAreaClassNameA}
             />
           )}
           {comparisonB && (
             <ComparisonDetail
               data={comparisonB}
-              priceClassName={priceClassName}
-              buildingAreaClassName={buildingAreaClassName}
-              landAreaClassName={landAreaClassName}
+              priceClassName={priceClassNameB}
+              buildingAreaClassName={buildingAreaClassNameB}
+              landAreaClassName={landAreaClassNameB}
             />
           )}
         </>
