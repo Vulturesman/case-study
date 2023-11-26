@@ -1,0 +1,92 @@
+$main-color: #a8a8a8;
+
+.comparison-container {
+  display: flex;
+  margin-top: 1.5rem;
+  gap: 1rem;
+
+  .comparison-property-container {
+    padding: 0.5rem;
+    border: 1px solid $main-color;
+
+    .comparison-property-image {
+      object-fit: cover;
+      width: 20rem;
+    }
+
+    .comparison-property-details {
+      display: flex;
+      flex-direction: column;
+
+      .comparison-property-price {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding-bottom: 0.5rem;
+        .better {
+          background-color: green;
+        }
+
+        .worse {
+          background-color: red;
+        }
+
+        .same {
+          background-color: yellow;
+        }
+      }
+      .comparison-property-locality {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding-bottom: 0.5rem;
+      }
+      .comparison-property-floor {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding-bottom: 0.5rem;
+        .better {
+          background-color: green;
+        }
+
+        .worse {
+          background-color: red;
+        }
+
+        .same {
+          background-color: yellow;
+        }
+      }
+      .comparison-property-land {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding-bottom: 0.5rem;
+        .better {
+          background-color: green;
+        }
+
+        .worse {
+          background-color: red;
+        }
+
+        .same {
+          background-color: yellow;
+        }
+      }
+      .comparison-property-company {
+        display: flex;
+        align-items: center;
+
+        .comparison-property-company-image {
+          height: 3rem;
+        }
+      }
+    }
+  }
+}
+
+sup {
+  font-size: 0.5rem;
+}

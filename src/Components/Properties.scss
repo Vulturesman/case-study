@@ -1,0 +1,38 @@
+.properties-container {
+  display: flex;
+  gap: 0.2rem;
+  margin-top: 2rem;
+
+  .pagination-container {
+    display: flex;
+    margin: 1rem;
+
+    .pagination__button {
+      background-color: white;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .property-container {
+    display: flex;
+    flex-direction: column;
+    width: 7rem;
+    height: 7rem;
+    cursor: pointer;
+
+    .property-image {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .property-slug {
+      font-size: 0.7rem;
+      margin: 0;
+    }
+  }
+  .property-container.selected {
+    scale: 1.1;
+    border: 3px solid blue;
+  }
+}
