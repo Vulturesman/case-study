@@ -19,6 +19,7 @@ export default function ComparisonDetail({
     <div className="comparison-property-container" key={id}>
       <img className="comparison-property__image" src={images[0]} alt={name} />
       <p className="comparison-property__name">{name}</p>
+
       <div className="comparison-property__details">
         <p className={`comparison-property__price ${priceClassName}`}>
           <strong>Price</strong>{" "}
@@ -42,6 +43,7 @@ export default function ComparisonDetail({
             {land_area} m<sup>2</sup>
           </span>
         </p>
+
         {company_name && company_logo && (
           <div className="comparison-property__company">
             <img

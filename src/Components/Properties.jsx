@@ -69,7 +69,7 @@ export default function Properties({ idA, setIdA, idB, setIdB }) {
       </div>
 
       {isLoading ? (
-        <p>Loading...</p>
+        <p>Loading Properties...</p>
       ) : (
         currentProperties.map(
           ({ id, name, name_extracted, locality, images }) => (
